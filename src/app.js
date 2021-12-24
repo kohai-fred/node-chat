@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 
-const PORT = 1337;
+const PORT = process.env.PORT || 1337;
 
 app.set("view engine", "pug");
 app.set("views", "./src/views");
