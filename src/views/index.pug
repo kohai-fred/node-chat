@@ -1,0 +1,14 @@
+extends layout.pug
+
+block variables
+    - const pageTitle = "Acceuil"
+
+block content
+    h1 Choisissez un pseudo
+
+    form(action="/chat", method="get")
+        .form-group
+            label(for="pseudo") Pseudonyme :
+            input(type="text", name="pseudo" placeholder="Votre pseudo...")
+        .form-actions
+            button(type="submit") Se connecter
